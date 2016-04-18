@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Video Player - Demo</title>
+	<link type="text/css" href="css/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script src="sweet-alert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="sweet-alert.css">
+	
+	<script>
+	$(document).ready(function(){
+      $("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            //m4v: "vid/nfs.mp4",
+            m4v: "https://ia802302.us.archive.org/27/items/Pbtestfilemp4videotestmp4/video_test_512kb.mp4",
+            ogv: "vid/TEDxPhoenix-KelliAnderson-DisruptiveWonderforaChange.ogv",
+            poster: "vid/nfs.png"
+          });
+        },
+        swfPath: "/js",
+        supplied: "m4v,ogv"
+      });
+    });
+	</script>
+</head>
+
+
+<body background="penta.png">
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.4.0/annyang.min.js"></script>
+<script>
+if (annyang) {
+  // Let's define a command.
+  var commands = {
+    'hello': function() { swal({   title: "Hey There!",   text: "This is the first time REMAP has met you. I will guide you through a set of steps , upon completion of which you can start using REMAP! Make sure the microphone is close to your mouth and say OK!",   type: "info", showCancelButton:"true" ,   confirmButtonText: "Cool" }); }
+	
+  };
+
+  
+  
+  var commands0987 = {
+    'Ok': function() { swal({   title: "Awesome!",   text: "That's great , it's almost as if youre sitting here with me! Now , I will ask you to repeat a certain set of words after me. Follow as per the responses! Say YES",   type: "success", showCancelButton:"true" ,   confirmButtonText: "Let's do this!" }); }
+	
+  };
+  
+   
+   var commands0988 = {
+    'Yes': function() { swal({   title: "Awesome!",   text: "Amazing! Now say NO",   type: "success", showCancelButton:"true" ,   confirmButtonText: "Cool!" }); }
+	
+  };
+  
+  var commands0989 = {
+    'No': function() { swal({   title: "Awesome!",   text: "Amazing! Now say READY",   type: "success", showCancelButton:"true" , confirmButtonText: "Ready!" }); }
+	
+  };
+  
+  var commands0990 = {
+    'Ready': function() { swal({   title: "That's It!",   text: "You are all rady to start using REMAP , a common list of commands will be available on the player page! This window will auto close in 5 seconds.",   type: "success", showCancelButton:"true" , timer: 5000 ,confirmButtonText: "Use REMAP!" }); }
+	
+  };
+  
+   var commands0991 = {
+    'commands': function() { swal({   title: "Commands!",   text: "play  ,  stop  , mute , unmute , full , small , what all is there , show all movies                    This window will auto close in 10 seconds.",   type: "success", showCancelButton:"true" , timer: 10000 ,confirmButtonText: "Use REMAP!" }); }
+	
+  };
+  
+
+  
+  var commands1 = {
+    'play': function() {  document.getElementById("play").click();  }
+	
+  };
+  
+   var commands12 = {
+    'stop': function() {  document.getElementById("pause").click();  }
+	
+  };
+  
+   var commands123 = {
+    'mute': function() {  document.getElementById("mute").click();       }
+	
+  };
+  
+   var commands1234 = {
+    'unmute': function() {  document.getElementById("unmute").click();  }
+	
+  };
+  
+   var commands12345 = {
+    'full': function() {  document.getElementById("full").click();  }
+	
+  };
+  
+   var commands123456 = {
+    'small': function() {  document.getElementById("small").click();  }
+	
+  };
+ 
+  
+  var commands2 = {
+    'show all movies': function() { window.open("vid"); }
+	
+  };
+  
+  var commands3 = {
+    'what all is there': function() { alert('I have a set of videos , if you want , just ask me to show all movies!'); }
+	
+  };
+  
+ 
+ 
+	
+ 
+  
+   var commands6 = {
+    'play need for speed': function() { window.open("vid/nfs.mp4"); }
+	
+  };
+  
+   var commands7 = {
+    'play ted': function() { window.open("vid/TEDxPhoenix-KelliAnderson-DisruptiveWonderforaChange"); }
+	
+  };
+  
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+  annyang.addCommands(commands1);
+   annyang.addCommands(commands0987);
+      annyang.addCommands(commands0988);
+	  annyang.addCommands(commands0989);
+	    annyang.addCommands(commands0990);
+
+	    annyang.addCommands(commands0991);
+
+		annyang.addCommands(commands2);
+  annyang.addCommands(commands3);
+  annyang.addCommands(commands6);
+  annyang.addCommands(commands7);
+
+  annyang.addCommands(commands12);
+  annyang.addCommands(commands123);
+  annyang.addCommands(commands1234);
+  annyang.addCommands(commands12345);
+  annyang.addCommands(commands123456);
+  
+  annyang.debug();
+
+  // Start listening.
+  annyang.start();
+}
+</script>
+
+
+
+
+
+<div id="jp_container_1" class="jp-video">
+    <div class="jp-title">
+      <h1 align=center><img src="rs.png"></img></h1>
+	  
+    </div>
+    <div class="jp-type-single">
+      <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+      <div class="jp-gui">
+        <div class="jp-video-play">
+          <a href="javascript:;" class="jp-video-play-icon" tabindex="1">&#61515;</a>
+        </div>
+        <div class="jp-interface">
+          <div class="jp-controls-holder">
+            <ul class="jp-controls">
+             <li><a href="javascript:;"  name="play" id="play" class="jp-play" tabindex="1">&#61515;</a></li>
+              <li><a href="javascript:;"  name="pause" id="pause" class="jp-pause" tabindex="1">&#61516;</a></li>
+              <li><a href="javascript:;"  name="mute" id="mute" class="jp-mute" tabindex="1" title="mute">&#61480;</a></li>
+              <li><a href="javascript:;"  name="unmute" id="unmute" class="jp-unmute" tabindex="1" title="unmute">&#61478;</a></li>
+            </ul>
+            <div class="jp-volume-bar">
+              <div class="jp-volume-bar-value"></div>
+            </div>
+            <ul class="jp-toggles">
+             <li><a href="javascript:;" name="full" id="full" class="jp-full-screen" tabindex="1" title="full screen">&#61541;</a></li>
+              <li><a href="javascript:;" name="small" id="small" class="jp-restore-screen" tabindex="1" title="restore screen">&#61542;</a></li>
+          </div>
+          <div class="jp-progress">
+            <div class="jp-seek-bar">
+              <div class="jp-play-bar"></div>
+            </div>
+          </div>
+          <div class="jp-current-time"></div>
+        </div>
+      </div>
+      <div class="jp-no-solution">
+        <span>Update Required</span>
+        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+      </div>
+    </div>
+<div align=center>
+	<h1>LIST OF COMMANDS : Say "Commands" to access the list!</h1>
+	<br>
+	<h1>Our Team</h1>
+	<div id="menu">
+  <ul>
+    <li>Sahil Bhalla, </li>
+    <li>Jasmine Dhillon, </li>
+    <li>Aditi Mahajan, </li>
+	<li>Monal Razdan</li>
+
+  </ul>
+</div>
+
+
+	
+</div>
+	</div>
+</body>
+</html>
