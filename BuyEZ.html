@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1">
+        <link rel="stylesheet" href="css/vanilla.css">
+    </head>
+    <body class="vanilla">
+        <header >
+            <h1>BuyEZ</h1>
+        </header>
+        <hr />
+        <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        .column {
+            float: left;
+            padding: 10px;
+            height: 750px;
+        }
+
+        .left {
+            width: 70%;
+        }
+
+        .right {
+            width: 30%;
+        }
+
+        .btn {
+            display:block;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid red;
+        }
+
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script>
+            if (annyang) {
+                // Let's define our first command. First the text we expect, and then the function it should call
+                var command = {
+                    'buy xps 13': function() {
+                    var c = document.getElementById("wc-shellinput");
+                    c.fillText("buy XPS 13")
+                }
+            };
+
+            // Add our commands to annyang
+            annyang.addCommands(command);
+
+            // Start listening. You can call this here, or attach this call to an event, button, etc.
+            annyang.start();
+            }
+        </script>
+
+        <div class="row">
+            <div class="column left" style="background-color:#fff;">
+            <section>
+                <iframe src='https://webchat.botframework.com/embed/BuyEasyy?s=CfJH9lbOHsM.cwA.SxI.zX0ymTh8N5_-15rpEaZ2-jnQjxxAAch1AcrkO8osFYQ' width=" 100% " height="700"></iframe> 
+            </section>  
+            </div>
+        <div class="column right" style="background-color:#bbb;">
+            <h2>Some things you can ask me</h2>
+            <p>Buy XPS 13 <br>Buy Inspiron 15</p>
+            <button onclick="annyang.start()"><img src="http://www.insideronline.org/wp-content/uploads/2016/06/free-speech-icon.gif" width="50"></button>
+            </div>
+        </div>   
+        <hr />
+        <footer>
+            <section>
+                 &copy; 2017, Two and a Half Devs
+            </section>
+        </footer>
+    </body>
+</html>
